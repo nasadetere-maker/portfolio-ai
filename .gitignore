@@ -7,3 +7,5 @@ models/
 .env
 .DS_Store
 Thumbs.db
+model/
+results/

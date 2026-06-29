@@ -25,9 +25,10 @@
 ## 🚀 Быстрый старт
 
 ### 1. Установка зависимостей
-```bash
-pip install -r requirements.txt
----
+```markdown
+### 1. Установка зависимостей
+
+Выполни команду: `pip install -r requirements.txt`
 
 ## 🌐 Онлайн-демо
 

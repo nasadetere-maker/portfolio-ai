@@ -27,41 +27,6 @@
 ### 1. Установка зависимостей
 ```bash
 pip install -r requirements.txt
-2. Загрузка датасета
-python src/load_dataset.py
-3. Предобработка данных
-python src/preprocess_data.py
-4. Обучение модели
-python src/train_model.py
-5. Предсказание на новых текстах
-python src/predict.py
-6. Запуск веб-интерфейса (Gradio)
-python src/app.py
-📂 Структура проекта
-project-02-text-classification/
-├── data/                  # Датасеты (не в Git)
-├── model/                 # Обученная модель (не в Git)
-├── results/               # Результаты обучения (не в Git)
-├── screenshots/           # Скриншоты результатов
-│   ├── day4-training-complete.png
-│   └── day5-gradio-app.png
-├── src/                   # Исходный код
-│   ├── load_dataset.py    # Загрузка IMDB
-│   ├── preprocess_data.py # Токенизация
-│   ├── train_model.py     # Обучение модели
-│   ├── predict.py         # Предсказания в терминале
-│   └── app.py             # Gradio веб-интерфейс
-├── case-study.md          # Подробная документация
-├── README.md              # Описание проекта
-├── requirements.txt       # Зависимости
-└── .gitignore
-🛠️ Технологии
-Python 3.14
-HuggingFace Transformers — модель DistilBERT
-Datasets — загрузка IMDB
-PyTorch — обучение нейросети
-Gradio — веб-интерфейс
-Git + GitHub — контроль версий
 ---
 
 ## 🌐 Онлайн-демо

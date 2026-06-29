@@ -1,0 +1,20 @@
+<<<<<<< HEAD
+node_modules/
+.n8n/
+.env
+*.log
+.DS_Store
+Thumbs.db
+=======
+__pycache__/
+*.py[cod]
+data/
+models/
+*.pt
+*.bin
+.env
+.DS_Store
+Thumbs.db
+model/
+results/
+>>>>>>> 82ab92b199f2058d6e33b7764654033117527166

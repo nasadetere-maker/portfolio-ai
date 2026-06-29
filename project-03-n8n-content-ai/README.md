@@ -1,5 +1,3 @@
-
-=======
 # Text Classification (NLP)
 
 **Project 2 of my AI Engineering Portfolio**
@@ -51,4 +49,4 @@
 **Автор:** Natalia  
 **Дата:** Июнь 2026  
 **Статус:** ✅ Завершён
->>>>>>> 82ab92b199f2058d6e33b7764654033117527166
+

@@ -1,51 +1,70 @@
-# Text Classification (NLP)
+# 🚀 AI Engineering Portfolio
 
-**Project 2 of my AI Engineering Portfolio**
-
-## 📌 Описание проекта
-
-Модель для **сентимент-анализа** текстов на английском языке. Определяет настроение отзыва: **позитивный** или **негативный**.
-
-Обучена на датасете **IMDB Movie Reviews** (50,000 отзывов) с использованием модели **DistilBERT** (fine-tuning).
+**Коллекция проектов в области AI/ML и автоматизации**
 
 ---
 
-## 🏆 Результаты
+## 👤 Обо мне
 
-| Метрика | Значение |
-|---------|----------|
-| **Accuracy** | **93%** ✅ |
-| Модель | DistilBERT (66M параметров) |
-| Эпохи обучения | 3 |
-| Время обучения | ~60 минут |
-| Датасет | 50,000 отзывов (IMDB) |
+Привет! Я Natalia, создаю проекты в области искусственного интеллекта и машинного обучения.
 
 ---
 
-## 🚀 Быстрый старт
+## 📂 Проекты
 
-### 1. Установка зависимостей
-```markdown
-### 1. Установка зависимостей
+### 📝 Project 1: Text Classification (NLP)
 
-Выполни команду: `pip install -r requirements.txt`
+**Модель для анализа тональности текстов**
 
-## 🌐 Онлайн-демо
+- 🎯 **Задача:** Классификация отзывов IMDB (позитив/негатив)
+- 🤖 **Модель:** DistilBERT (66M параметров)
+- 📊 **Точность:** 93%
+- 🌐 **Демо:** [HuggingFace Spaces](https://huggingface.co/spaces/nataly-nlp-dev/sentiment-analysis-nlp)
 
-Попробуй модель прямо сейчас:
-
-👉 **[HuggingFace Spaces: Sentiment Analysis NLP](https://huggingface.co/spaces/nataly-nlp-dev/sentiment-analysis-nlp)**
-
----
-
-## 🔗 Полезные ссылки
-
-- **🎭 Демо:** [Попробовать модель](https://huggingface.co/spaces/nataly-nlp-dev/sentiment-analysis-nlp)
-- **📚 Документация:** [case-study.md](case-study.md)
-- **📦 Датасет:** [IMDB на HuggingFace](https://huggingface.co/datasets/stanfordnlp/imdb)
+**[Подробнее →](project-02-text-classification/README.md)**
 
 ---
 
-**Автор:** Natalia  
-**Дата:** Июнь 2026  
-**Статус:** ✅ Завершён
+### 🎨 Project 2: AI Content Marketing Assistant
+
+**AI-ассистент для генерации контента на базе n8n**
+
+- 🎯 **Задача:** Автоматизация создания маркетингового контента
+- 🤖 **Технологии:** n8n + HuggingFace API + Telegram Bot
+- 📝 **Возможности:** Генерация постов, статей, email-рассылок
+- 🌐 **Статус:** 🚧 В разработке
+
+**[Подробнее →](project-03-n8n-content-ai/README.md)**
+
+---
+
+## 🛠️ Технологии
+
+- **Python** — основной язык
+- **HuggingFace Transformers** — NLP модели
+- **PyTorch** — фреймворк для ML
+- **n8n** — автоматизация workflows
+- **Gradio** — веб-интерфейсы
+- **Git + GitHub** — контроль версий
+
+---
+
+## 📊 Статистика
+
+| Показатель | Значение |
+|------------|----------|
+| **Всего проектов** | 2 |
+| **Завершено** | 1 ✅ |
+| **В разработке** | 1 🚧 |
+| **Средняя точность** | 93% |
+
+---
+
+## 📬 Контакты
+
+- **GitHub:** [@nasadetere-maker](https://github.com/nasadetere-maker)
+- **HuggingFace:** [nataly-nlp-dev](https://huggingface.co/spaces/nataly-nlp-dev)
+
+---
+
+**Последнее обновление:** Июнь 2026

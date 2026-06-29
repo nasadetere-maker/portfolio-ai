@@ -1,10 +1,29 @@
-# Text Classification (NLP)
-Project 2 of my AI Portfolio.
+# Text Classification (NLP) 
 
-## Goal
-Fine-tune a transformer model for sentiment analysis & intent classification.
+**Project 2 of my AI Engineering Portfolio**
 
-## Quick Start
+## 📌 Описание проекта
+
+Модель для **сентимент-анализа** текстов на английском языке. Определяет настроение отзыва: **позитивный** или **негативный**.
+
+Обучена на датасете **IMDB Movie Reviews** (50,000 отзывов) с использованием модели **DistilBERT** (fine-tuning).
+
+---
+
+##  Результаты
+
+| Метрика | Значение |
+|---------|----------|
+| **Accuracy** | **93%** ✅ |
+| Модель | DistilBERT (66M параметров) |
+| Эпохи обучения | 3 |
+| Время обучения | ~60 минут |
+| Датасет | 50,000 отзывов (IMDB) |
+
+---
+
+##  Быстрый старт
+
+### 1. Установка зависимостей
+```bash
 pip install -r requirements.txt
-
-See case-study.md for detailed documentation.

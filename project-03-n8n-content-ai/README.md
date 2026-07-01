@@ -1,52 +1,66 @@
-# Text Classification (NLP)
+# 🎨 AI Content Marketing Assistant
 
-**Project 2 of my AI Engineering Portfolio**
-
-## 📌 Описание проекта
-
-Модель для **сентимент-анализа** текстов на английском языке. Определяет настроение отзыва: **позитивный** или **негативный**.
-
-Обучена на датасете **IMDB Movie Reviews** (50,000 отзывов) с использованием модели **DistilBERT** (fine-tuning).
+**Проект 3: Автоматизация создания контента с помощью AI**
 
 ---
 
-## 🏆 Результаты
+## 📌 Описание проекта
 
-| Метрика | Значение |
-|---------|----------|
-| **Accuracy** | **93%** ✅ |
-| Модель | DistilBERT (66M параметров) |
-| Эпохи обучения | 3 |
-| Время обучения | ~60 минут |
-| Датасет | 50,000 отзывов (IMDB) |
+AI-ассистент для автоматической генерации маркетингового контента на базе **n8n** и **Ollama** (локальный AI).
+
+### Что умеет:
+- ✍️ Генерировать посты для социальных сетей
+- 📝 Создавать статьи и email-рассылки  
+- 🤖 Работать **локально** (без интернета, бесплатно)
+-  Быстро масштабироваться на разные типы контента
+
+---
+
+## 🏗️ Архитектура
+
+### Технологии:
+- **n8n** — оркестрация workflows
+- **Ollama** — локальный AI-сервер (модель Llama3)
+- **HTTP Request API** — взаимодействие с Ollama
 
 ---
 
 ## 🚀 Быстрый старт
 
-### 1. Установка зависимостей
-```markdown
-### 1. Установка зависимостей
+### 1. Установи зависимости
 
-Выполни команду: `pip install -r requirements.txt`
-
-## 🌐 Онлайн-демо
-
-Попробуй модель прямо сейчас:
-
-👉 **[HuggingFace Spaces: Sentiment Analysis NLP](https://huggingface.co/spaces/nataly-nlp-dev/sentiment-analysis-nlp)**
-
----
-
-## 🔗 Полезные ссылки
-
-- **🎭 Демо:** [Попробовать модель](https://huggingface.co/spaces/nataly-nlp-dev/sentiment-analysis-nlp)
-- **📚 Документация:** [case-study.md](case-study.md)
-- **📦 Датасет:** [IMDB на HuggingFace](https://huggingface.co/datasets/stanfordnlp/imdb)
-
----
-
-**Автор:** Natalia  
-**Дата:** Июнь 2026  
-**Статус:** ✅ Завершён
-
+**Установи n8n:**
+```bash
+npm install -g n8n
+1. Установи Ollama:
+Скачай: https://ollama.ai/download
+Установи и запусти приложение
+Скачай модель:ollama pull llama3
+2. Запусти Ollama ollama serve
+3. Запусти n8n
+Открой в браузере: http://localhost:5678
+4. Импортируй workflow
+В n8n нажми Import from File
+Выбери файл: workflows/ai-content-generator-ollama.json
+Workflow загрузится
+5. Протестируй
+Нажми "Execute workflow"
+AI сгенерирует пост про кофе (или другую тему)
+Готово! 🎉
+хостинг
+💡 Примеры использования
+Генерация поста про кофе:
+Input: topic: "кофе"
+Output:
+Good morning, coffee lovers!
+There's nothing quite like the perfect cup of joe to start your day off right...
+#coffee #coffeeaddict #morningmotivation #caffeinekick📚 Документация
+Case Study: docs/case-study.md
+Workflow JSON: workflows/ai-content-generator-ollama.json
+🔗 Полезные ссылки
+n8n: https://n8n.io
+Ollama: https://ollama.ai
+Llama3: https://ollama.ai/library/llama3
+Автор: Natalia
+Дата: Июль 2026
+Статус: 🚧 В разработке

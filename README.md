@@ -36,6 +36,12 @@
 
 **[Подробнее →](project-03-n8n-content-ai/README.md)**
 
+### 3. AI Video Creator ⭐ НОВЫЙ
+🎬 [project-04-ai-video-creator/](project-04-ai-video-creator/README.md)
+- GUI приложение для создания видео
+- AI-озвучка + стоковые видео
+- CustomTkinter интерфейс
+
 ---
 
 ## 🛠️ Технологии

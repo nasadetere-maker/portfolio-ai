@@ -1,0 +1,147 @@
+{
+  "name": "Погода в Telegram",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 9
+            },
+            {}
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        0,
+        0
+      ],
+      "id": "a21d6235-5b97-43dd-a1f0-ac42bb38e46c",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {
+        "url": "https://api.open-meteo.com/v1/forecast",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "latitude",
+              "value": "56.47"
+            },
+            {
+              "name": "longitude",
+              "value": "53.81"
+            },
+            {
+              "name": "current_weather",
+              "value": "true"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "264782b7-4d61-4e8c-9cf1-b66a6116d538",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "jsCode": "const weather = $input.first().json.current_weather;\nconst temp = weather.temperature;\nconst wind = weather.windspeed;\nconst code = weather.weathercode;\n\nlet description = \"Ясно ☀️\";\nif (code >= 1 && code <= 3) description = \"Малооблачно ⛅\";\nif (code >= 45 && code <= 48) description = \"Туман 🌫️\";\nif (code >= 51 && code <= 67) description = \"Дождь ️\";\nif (code >= 71 && code <= 77) description = \"Снег ❄️\";\nif (code >= 80 && code <= 99) description = \"Ливень или гроза ⛈️\";\n\nconst message = `☀️ Доброе утро!\n\nВ Сарапуле сейчас:\n🌡️ Температура: ${temp}°C\n💨 Ветер: ${wind} км/ч\n🌤️ Погода: ${description}\n\nХорошего дня!`;\n\nreturn [{ json: { text: message } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        416,
+        0
+      ],
+      "id": "d29d920c-c5cf-468d-a51f-7a2bef14c50c",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "chatId": "968084613",
+        "text": "={{ $json.text }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        624,
+        0
+      ],
+      "id": "4837384b-cf3f-4d16-bfe4-03ad2cd21d2c",
+      "name": "Send a text message",
+      "webhookId": "2b0db87f-b206-4ce1-b1f0-91b350774908",
+      "credentials": {
+        "telegramApi": {
+          "id": "Z7Ea5G7BpE8OGVoM",
+          "name": "Telegram account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Send a text message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate",
+    "availableInMCP": false
+  },
+  "versionId": "ffb529df-214f-456b-b801-2d5f4665736e",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "75650c3c2112798e4c3e9dedba594f43971deb857ae6e34238e2b5e5b1acab99"
+  },
+  "nodeGroups": [],
+  "id": "539bE0uP56777fyC",
+  "tags": []
+}

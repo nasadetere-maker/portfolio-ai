@@ -1,0 +1,55 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Данные (не загружаем реальные данные)
+data/*.csv
+data/*.xlsx
+data/large_*
+
+# Отчёты (не загружаем сгенерированные отчёты)
+reports/*.xlsx
+reports/*.png
+reports/*.html
+reports/*.pdf
+
+# Сессии и токены
+*.session
+*.env
+*.token
+
+# Временные файлы
+*.tmp
+*.temp
